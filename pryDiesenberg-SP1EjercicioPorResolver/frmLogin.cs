@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,22 +23,47 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
             int intentos = 0;
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
+            string moduloSeleccionado = txtModulo.Text;
+            string[] modulosPermitidos = null;
 
             if ((usuario == "Adm" && contraseña == "@1a") ||
                 (usuario == "John" && contraseña == "*2b") ||
                 (usuario == "Ceci" && contraseña == "*@3c") ||
                 (usuario == "God" && contraseña == "*@#4d"))
             {
-                frmNavegacion frmNavegacion = new frmNavegacion();
-                frmNavegacion.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Datos incorrectos. Acceso Denegado.");
-                intentos++;
-                if (intentos == 3)
                 {
-                    this.Close();
+                    if (usuario == "Adm")
+                    {
+                        modulosPermitidos = new string[] { "ADM", "COM", "VTA" };
+                    }
+                    else if (usuario == "John")
+                    {
+                        modulosPermitidos = new string[] { "SIST" };
+                    }
+                    else if (usuario == "Ceci")
+                    {
+                        modulosPermitidos = new string[] { "ADM", "VTA" };
+                    }
+                    else if (usuario == "God")
+                    {
+                        modulosPermitidos = new string[] { "ADM", "COM", "VTA", "SIST" };
+                    }
+                    if (modulosPermitidos != null && modulosPermitidos.Contains(moduloSeleccionado))
+                    {
+                        this.Hide();
+                        frmNavegacion f = new frmNavegacion();
+                        f.Text = usuario;
+                        f.ShowDialog();
+                        this.Show();
+                    }
+                    {
+                        MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                        intentos++;
+                        if (intentos == 3)
+                        {
+                            this.Close();
+                        }
+                    }
                 }
             }
         }
