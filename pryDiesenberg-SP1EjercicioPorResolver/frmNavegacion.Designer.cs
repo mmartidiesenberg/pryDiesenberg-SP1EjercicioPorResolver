@@ -28,19 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblNav = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lblNav
+            // 
+            this.lblNav.AutoSize = true;
+            this.lblNav.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.lblNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNav.ForeColor = System.Drawing.Color.Indigo;
+            this.lblNav.Location = new System.Drawing.Point(86, 226);
+            this.lblNav.Name = "lblNav";
+            this.lblNav.Size = new System.Drawing.Size(725, 42);
+            this.lblNav.TabIndex = 0;
+            this.lblNav.Text = "Comience a Navegar en Nuestra Página";
             // 
             // frmNavegacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(904, 587);
+            this.Controls.Add(this.lblNav);
             this.Name = "frmNavegacion";
             this.Text = "Navegación";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblNav;
     }
 }
