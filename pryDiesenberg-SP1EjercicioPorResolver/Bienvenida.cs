@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pryDiesenberg_SP1EjercicioPorResolver
 {
-    public partial class Form1 : Form
+    public partial class frmBienvenida : Form
     {
-        public Form1()
+        public frmBienvenida()
         {
             InitializeComponent();
+        }
+
+        private void frmBienvenida_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
