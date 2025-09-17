@@ -28,11 +28,8 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                 (usuario == "Ceci" && contraseña == "*@3c") ||
                 (usuario == "God" && contraseña == "*@#4d"))
             {
-                this.Hide();
-                frmLogin f = new frmLogin();
-                f.Text = usuario; // muestra el nombre del usuario en el título
-                f.ShowDialog();
-                this.Show();
+                frmNavegacion frmNavegacion = new frmNavegacion();
+                frmNavegacion.ShowDialog();
             }
             else
             {
@@ -43,6 +40,11 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                     this.Close();
                 }
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
