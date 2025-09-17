@@ -24,7 +24,8 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
+            frmLogin ventanaLogin = new frmLogin();
+            ventanaLogin.Show();
         }
     }
 }
