@@ -74,6 +74,7 @@
             // 
             // txtModulo
             // 
+            this.txtModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModulo.FormattingEnabled = true;
             this.txtModulo.Items.AddRange(new object[] {
