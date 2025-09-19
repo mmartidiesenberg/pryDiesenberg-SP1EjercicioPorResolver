@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -13,6 +14,7 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
 {
     public partial class frmLogin : Form
     {
+        int intentos = 0;
         public frmLogin()
         {
             InitializeComponent();
@@ -20,7 +22,6 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int intentos = 0;
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
             string moduloSeleccionado = txtModulo.Text;
@@ -31,47 +32,57 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                 (usuario == "Ceci" && contraseña == "*@3c") ||
                 (usuario == "God" && contraseña == "*@#4d"))
             {
+                
+                if (usuario == "Adm")
                 {
-                    if (usuario == "Adm")
-                    {
-                        modulosPermitidos = new string[] { "ADM", "COM", "VTA" };
-                    }
-                    if (usuario == "John")
-                    {
-                        modulosPermitidos = new string[] { "SIST" };
-                    }
-                    if (usuario == "Ceci")
-                    {
-                        modulosPermitidos = new string[] { "ADM", "VTA" };
-                    }
-                    if (usuario == "God")
-                    {
-                        modulosPermitidos = new string[] { "ADM", "COM", "VTA", "SIST" };
-                    }
-                    if (modulosPermitidos != null && modulosPermitidos.Contains(moduloSeleccionado))
-                    {
-                        this.Hide();
-                        frmNavegacion f = new frmNavegacion();
-                        f.Text = usuario;
-                        f.ShowDialog();
-                        this.Show();
-                        return;
-                    }
-                        MessageBox.Show("Datos incorrectos. Acceso Denegado.");
-                        intentos++;
-                        if (intentos == 3)
-                        {
-                            this.Close();
-                        }
-                    }
+                    modulosPermitidos = new string[] { "ADM", "COM", "VTA" };
                 }
+                    
+                if (usuario == "John")
+                {
+                    modulosPermitidos = new string[] { "SIST" };
+                }
+                    
+                if (usuario == "Ceci")
+                {
+                    modulosPermitidos = new string[] { "ADM", "VTA" };
+                }
+                    
+                if (usuario == "God")
+                {
+                    modulosPermitidos = new string[] { "ADM", "COM", "VTA", "SIST" };
+                }
+                    
+                if (modulosPermitidos != null && modulosPermitidos.Contains(moduloSeleccionado))
+                {
+                    this.Hide();
+                    frmNavegacion f = new frmNavegacion();
+                    f.Text = usuario;
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                    intentos++;
+                }
+            }
+            else
+            { 
+                MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                intentos++;
+                if (intentos >= 3)
+                {
+                    this.Close();
+                }                            
             }
         }
     }
+}
 
- 
 
-    
+
+
 
 
 
