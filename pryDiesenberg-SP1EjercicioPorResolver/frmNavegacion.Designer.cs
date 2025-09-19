@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavegacion));
             this.lblNav = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(452, 305);
             this.Controls.Add(this.lblNav);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmNavegacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
