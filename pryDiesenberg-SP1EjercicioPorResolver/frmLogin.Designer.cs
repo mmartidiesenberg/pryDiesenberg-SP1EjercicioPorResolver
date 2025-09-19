@@ -85,7 +85,7 @@
             this.txtModulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtModulo.Name = "txtModulo";
             this.txtModulo.Size = new System.Drawing.Size(116, 24);
-            this.txtModulo.TabIndex = 3;
+            this.txtModulo.TabIndex = 2;
             // 
             // txtContraseña
             // 
@@ -96,7 +96,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '#';
             this.txtContraseña.Size = new System.Drawing.Size(116, 23);
-            this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.TabIndex = 1;
             // 
             // txtUsuario
             // 
@@ -107,26 +107,26 @@
             this.txtUsuario.MaxLength = 10;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(116, 23);
-            this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.TabIndex = 0;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(251, 216);
+            this.btnAceptar.Location = new System.Drawing.Point(317, 47);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(86, 36);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(108, 216);
+            this.btnCancelar.Location = new System.Drawing.Point(317, 121);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 37);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -134,7 +134,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 296);
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(458, 220);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtUsuario);

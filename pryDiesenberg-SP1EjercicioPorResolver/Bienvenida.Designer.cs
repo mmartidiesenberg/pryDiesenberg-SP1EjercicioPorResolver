@@ -37,9 +37,10 @@
             this.lblBienvenidaSist.AutoSize = true;
             this.lblBienvenidaSist.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenidaSist.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblBienvenidaSist.Location = new System.Drawing.Point(160, 161);
+            this.lblBienvenidaSist.Location = new System.Drawing.Point(80, 84);
+            this.lblBienvenidaSist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBienvenidaSist.Name = "lblBienvenidaSist";
-            this.lblBienvenidaSist.Size = new System.Drawing.Size(985, 55);
+            this.lblBienvenidaSist.Size = new System.Drawing.Size(514, 29);
             this.lblBienvenidaSist.TabIndex = 0;
             this.lblBienvenidaSist.Text = "Bienvenido/a al Sistema de Sintepart S.R.L";
             // 
@@ -47,9 +48,10 @@
             // 
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(548, 452);
+            this.btnIngresar.Location = new System.Drawing.Point(274, 235);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(196, 64);
+            this.btnIngresar.Size = new System.Drawing.Size(98, 33);
             this.btnIngresar.TabIndex = 1;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -57,15 +59,16 @@
             // 
             // frmBienvenida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.BackgroundImage = global::pryDiesenberg_SP1EjercicioPorResolver.Properties.Resources.car_icon_icons_com_54409;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1301, 655);
+            this.ClientSize = new System.Drawing.Size(642, 341);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblBienvenidaSist);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida";
