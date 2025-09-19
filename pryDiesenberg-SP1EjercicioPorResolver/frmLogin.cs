@@ -36,15 +36,15 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                     {
                         modulosPermitidos = new string[] { "ADM", "COM", "VTA" };
                     }
-                    else if (usuario == "John")
+                    if (usuario == "John")
                     {
                         modulosPermitidos = new string[] { "SIST" };
                     }
-                    else if (usuario == "Ceci")
+                    if (usuario == "Ceci")
                     {
                         modulosPermitidos = new string[] { "ADM", "VTA" };
                     }
-                    else if (usuario == "God")
+                    if (usuario == "God")
                     {
                         modulosPermitidos = new string[] { "ADM", "COM", "VTA", "SIST" };
                     }
@@ -55,8 +55,8 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                         f.Text = usuario;
                         f.ShowDialog();
                         this.Show();
+                        return;
                     }
-                    {
                         MessageBox.Show("Datos incorrectos. Acceso Denegado.");
                         intentos++;
                         if (intentos == 3)
@@ -67,14 +67,11 @@ namespace pryDiesenberg_SP1EjercicioPorResolver
                 }
             }
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}
 
+ 
+
+    
 
 
 
