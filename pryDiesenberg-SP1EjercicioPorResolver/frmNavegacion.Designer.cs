@@ -37,20 +37,23 @@
             this.lblNav.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.lblNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNav.ForeColor = System.Drawing.Color.Indigo;
-            this.lblNav.Location = new System.Drawing.Point(86, 226);
+            this.lblNav.Location = new System.Drawing.Point(32, 118);
+            this.lblNav.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNav.Name = "lblNav";
-            this.lblNav.Size = new System.Drawing.Size(725, 42);
+            this.lblNav.Size = new System.Drawing.Size(384, 24);
             this.lblNav.TabIndex = 0;
             this.lblNav.Text = "Comience a Navegar en Nuestra Página";
             // 
             // frmNavegacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(904, 587);
+            this.ClientSize = new System.Drawing.Size(452, 305);
             this.Controls.Add(this.lblNav);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmNavegacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Navegación";
             this.ResumeLayout(false);
             this.PerformLayout();
